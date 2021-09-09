@@ -1,0 +1,48 @@
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jsAtv06_questao11.htm</title>
+    </head>
+    <body>
+        <script language="Javascript">
+    	    var cont = 1;
+    	    var opc;
+    	    var saldo = 0.00;
+    	    var saque = 0.00, deposito = 0.00;
+    	    
+    	    while (cont >= 0){
+    	      
+    	        opc = window.prompt("Escolha uma das opções: \n(a) consulta saldo \n(b) saque \n(c) depósito \n(d) sair");
+    	        
+    	        if (opc == "a"){
+    	          alert("saldo: R$ " +saldo);
+    	          
+    	        }
+    	        else if (opc == "b"){
+    	          saque = parseFloat(window.prompt("digite o valor do saque:"));
+    	         saldo = saldo - saque;
+    	         alert("saque realizado com sucesso!");
+    	          
+    	        }
+    	        else if (opc == "c"){
+    	           deposito = parseFloat(window.prompt("digite o valor do depósito:"));
+    	           saldo = (saldo + deposito);
+    	           alert("saldo depositado com sucesso!");
+    	        }
+    	        else if (opc == "d"){
+    	          document.write("<h2>Saldo: R$ " +saldo+ "</h2>");
+    	          if (saldo < 0){
+    	            document.write("<h2>alerta: seu saldo está negativo!!</h2>");
+    	            
+    	          }
+    	          document.write("<h2>Fim Do Programa.</h2>")
+                break;
+    	          
+    	        }
+    	    }
+	
+	    </script>
+    </body>
+</html>
