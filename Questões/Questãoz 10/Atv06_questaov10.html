@@ -1,0 +1,68 @@
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jsAtv06_questao10.htm</title>
+    </head>
+    <body>
+        <h2> Pesquisa Entre Os Habitantes </h2>
+        <script language="Javascript">
+            var cont = 1;
+            var sexo1, idade1, sexo2;
+            var maiorI=0, menorI=200, idade2;
+            var qnt_mulheres = 0, qntHabitantes = 0;
+            var salario = 0, menor_salario=999999;
+            var soma_salario = 0;
+            var repetir;
+            
+            while (cont >= 0) {
+              idade1 = parseInt(window.prompt("Informe sua idade:"));
+              if (idade1 < 0){
+                break;
+              }
+              sexo1 = window.prompt("Informe Seu Sexo: (M/F) \nObs.: Letra Maiúscula.");
+              salario = parseFloat(window.prompt("Informe seu salário:"));
+              
+              if (sexo1 == "F"){
+                qnt_mulheres = qnt_mulheres + 1;
+              }
+              if (salario >= 0){
+               soma_salario = soma_salario + salario;
+               qntHabitantes = qntHabitantes + 1;
+              }
+              if(idade1 > maiorI){
+                  maiorI = idade1;
+                  
+              }
+              if(idade1 < menorI){
+                menorI = idade1;
+              }
+        
+              if(salario < menor_salario){
+                 menor_salario = salario;
+                 idade2 = idade1;
+                 sexo2 = sexo1;
+              }
+                 
+              repetir = window.confirm("quer continuar?");
+              if (repetir){
+                  cont++;
+              }
+              else {
+                  break;
+              }
+            }
+            document.write("<h3>Fim do programa!</h3>");
+
+            document.write("<h4>Media dos salarios do grupo: R$ "+(soma_salario/qntHabitantes)+ "</h4>");
+               
+            document.write("<h4> Menor idade: " +menorI+ " anos </h4>");
+            document.write("<h4> Maior idade: " +maiorI+ " anos </h4>");
+               
+            document.write("<h4>A quantidade de mulheres na região = " +qnt_mulheres+ "</h4>");
+               
+            document.write("<h4>Pessoa com o menor salario tem: "+idade2+" anos e é do sexo: "+ sexo2 + "</h4>");
+        </script>
+    </body>
+</html>
