@@ -1,0 +1,31 @@
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jsAtv06_questao5.htm</title>
+    </head>
+    <body>
+         <h2>Números Pares e Ímpares:</h2>
+	    
+	    <script language="Javascript">
+    	    var num;
+    	    var nPar = 0;
+    	    var cont = 1;
+    	    for(i=1;i<=10;i++){
+    	        num = parseFloat(window.prompt("Digite 10 número:\n\n" + "Digite o " +cont+ "° número:"));
+    	        cont ++
+    	        
+    	        if (num % 2 == 0){
+    	             nPar = num;
+    	            document.write("Número par: " +nPar+ "<br><br>");
+    	        }
+    	        else {
+    	            document.write("Número ímpar: " +num+ "<br><br>");
+    	        }
+    	         
+    	    }
+	
+	    </script>
+    </body>
+</html>
