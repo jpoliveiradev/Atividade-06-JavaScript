@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jsAtv06_questao3.htm</title>
+    </head>
+    <body>
+        <h1>Tabuada das 4 operações:</h1>
+        <script language="Javascript">
+            var numA = 1, numS = 1, numM = 1, numD = 1;
+            var n1;
+            n1 = parseInt(window.prompt("Informe um número de 1 a 10:"));
+
+            document.write("<h3>Tabuada de Adição: <h3>");
+
+            for (i = 1; i <= 10; i++) {
+
+                document.write(n1 + " + " + numA + " = " + (n1 + numA) + "<br>");
+                numA++;
+
+            }
+            document.write("----------------------------------------");
+            document.write("<h3>Tabuada de Subtração: <h3>");
+            for (i = 1; i <= 10; i++) {
+
+                document.write(n1 + " - " + numS + " = " + (n1 - numS) + "<br>");
+                numS++;
+
+            }
+            document.write("----------------------------------------");
+            document.write("<h3>Tabuada de Multiplicação: <h3>");
+            for (i = 1; i <= 10; i++) {
+
+                document.write(n1 + " x " + numM + " = " + (n1 * numM) + "<br>");
+                numM++;
+
+            }
+            document.write("----------------------------------------");
+            document.write("<h3>Tabuada de Divisão: <h3>");
+            for (i = 1; i <= 10; i++) {
+
+                document.write(n1 + " ÷ " + numD + " = " + (n1 / numD) + "<br>");
+                numD++;
+
+            }
+        </script>
+    </body>
+</html>
