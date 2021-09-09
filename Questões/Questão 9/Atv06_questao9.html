@@ -1,0 +1,27 @@
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jsAtv06_questao9.htm</title>
+    </head>
+    <body>
+        <script language="Javascript">
+				var cont = 1;
+				var num ;
+						
+				while (cont <= 7){
+					num = parseFloat(window.prompt("Informe um número entre 12 e 20: "));
+					
+					if (num >= 12 && num <= 20){
+					document.write("<h2>número digitado: " +num+ "</h2>");
+					break;
+					}
+					else {
+					alert("Entrada inválida! \nDigite o número novamente");
+					cont++;
+					}
+				}
+	    </script>
+    </body>
+</html>
